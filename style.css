@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(105.73deg, rgba(18, 78, 145, 0.5) -6.28%, rgba(254, 254, 254, 0.5) 105.99%), url('img/home-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    width: 557px;
+    height: 593px;
+    display: flex;
+}
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fefefe;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.top-1 {
+    height: auto;
+    width: 100%;
+    margin: 20px 0px 40px 0px;
+    display: flex;
+}
+
+.text-school-title {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.text-school-title span:nth-child(1) {
+    font-size: 20px;
+    background: linear-gradient(90deg, #194F90 0%, #2B2728 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-school-title span:nth-child(2) {
+    font-size: 50px;
+    font-weight: 700;
+    color: #5483BA;
+}
+
+.logo {
+    width: 90px;
+    aspect-ratio: 1 / 1;
+    background: url('img/RTU_Seal.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px 12px 0px 17px;
+}
+
+
+
+
+.user-pass-container {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-pass-container div {
+    width: 100%;
+    margin-left: 30px;
+}
+
+
+/* username and password input box */
+input[type="text"], input[type="password"] {
+    padding: 8px 17px;
+    border: 2px solid #6C8FB8;
+    outline-color: #6C8FB8;
+    border-radius: 5px;
+    font-family: 'Lexend';
+    color: #6C8FB8;
+    font-size: 22px;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 2px;
+    transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 1s, transform 1s ease-out;
+}
+
+/* placeholder color */
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-family: 'Lexend';
+    color: rgba(108, 144, 184, 0.7);
+}
+
+/* outline color on focus */
+input[type="text"]:focus, input[type="password"]:focus {
+    outline-color: #265999;
+
+}
+
+/*Autofill color*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: #6C8FB8 !important;
+}
+
+
+
+.password-input-container {
+    position: relative;
+}
+
+.user-pass-container input[type="text"] {
+    margin-bottom: 11px;
+}
+
+.password-input-container input[type="password"] {
+    padding-right: 50px;
+}
+
+.password-input-container .fas.fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6C8FB8;
+    font-size: 20px;
+}
+
+/* vertical line in password box */
+.password-input-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    height: 75%;
+    width: 1px;
+    background-color: #6C8FB8;
+}
+
+
+
+/* forgot password styles */
+.forgot-pw-container {
+    margin-top: 11px;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    color: #92ACCA;
+}
+
+.forgot-pw-container a:visited {
+    color: #5C7799;
+}
+
+.forgot-pw-container a:active {
+    color: #2F4B6F;
+}
+
+
+/* login button */
+.login-btn-container {
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+}
+
+.login-btn-container button {
+    width: 100%;
+    height: auto;
+    font-size: 22px;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #194F90;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Lexend';
+    color: #FEFEFE;
+    border: none;
+}
