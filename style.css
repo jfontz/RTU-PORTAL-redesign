@@ -208,3 +208,15 @@ input:-webkit-autofill {
     color: #FEFEFE;
     border: none;
 }
+
+
+/* left bottom image and date */
+.left-bottom {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FEFEFE 0%, rgba(217, 217, 217, 0) 100%), url('img/bottom-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: inherit;
+}
