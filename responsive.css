@@ -1,4 +1,4 @@
-@media (max-width: 768PX) {
+@media (max-width: 768px) {
 
     /* full screen the entire container */
     .main-container {
@@ -19,13 +19,34 @@
     }
 
     .mobile-selection div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: #fefefe;
         padding: 0px !important;
         width: auto !important;
-        background-color: aqua;
+        background-color: #194F90;
         flex-grow: 1;
         text-align: center;
+        transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.3s, transform 0.2s ease-out;
+        padding: 5px 0px !important;
+        cursor: pointer;
     }
 
+
+    /* hover selection */
+    .mobile-selection div:hover {
+        background-color: #0E2E5E;
+    }
+
+    .mobile-selection div:first-child {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .mobile-selection div:last-child {
+        border-radius: 0px 10px 10px 0px;
+    }
 
 
     /* RTU logo and text container */
@@ -37,6 +58,7 @@
 
     .top-1 span:first-child {
         margin-top: 20px;
+        text-align: center;
     }
 
     .top-1 span:last-child {
@@ -48,20 +70,16 @@
 
 
 
-
-    .password-input-container .fas.fa-eye {
+    .password-input-container .fas.fa-eye, .password-input-container .fas.fa-eye-slash {
         right: 43px;
         transform: translateY(-50%);
     }
-    
+
     /* vertical line in password box */
     .password-input-container::before {
         right: 75px;
         transform: translateY(-50%);
     }
-
-
-
 
 
 
@@ -79,19 +97,44 @@
     }
 
     .user-pass-container div {
-        width: 90%;
+        width: 100%;
         margin-left: 0px;
         padding: 0px 30px;
     }
+}
 
 
 
+/* for smaller mobile screens such as Galaxy Fold */
+@media (max-width: 360px) {
+
+    /* text school title */
+    .top-1 span:first-child {
+        font-size: 14px;
+    }
+
+    .top-1 span:last-child {
+        font-size: 20px;
+    }
+
+    /* user and password input box font size */
+    .user-pass-container #username, .password-input-container #password {
+        font-size: 14px;
+    }
 
 
+    /* button icon and text (smaller) */
+    .mobile-selection div:first-child img, .mobile-selection div:last-child img {
+        height: 39px !important;
+        width: 39px !important;
+    }
 
+    .mobile-selection div:nth-child(2) img {
+        height: 31px !important;
+        width: 31px !important;
+    }
 
-
-
-
-
+    .mobile-selection div {
+        font-size: 12px;
+    }
 }

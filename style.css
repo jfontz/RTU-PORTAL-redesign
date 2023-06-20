@@ -132,26 +132,29 @@ input:-webkit-autofill {
 
 
 
+/* username and password container */
 .password-input-container {
     position: relative;
 }
 
-.user-pass-container input[type="text"] {
+.user-pass-container #username {
     margin-bottom: 11px;
 }
 
-.password-input-container input[type="password"] {
+.password-input-container #password {
     padding-right: 50px;
 }
 
-.password-input-container .fas.fa-eye {
+/* eye icon */
+.password-input-container .fas.fa-eye,
+.password-input-container .fas.fa-eye-slash {
     position: absolute;
     top: 50%;
     right: 13px;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #6C8FB8;
     font-size: 20px;
+    color: #6C8FB8;
 }
 
 /* vertical line in password box */
@@ -165,6 +168,7 @@ input:-webkit-autofill {
     width: 1px;
     background-color: #6C8FB8;
 }
+
 
 
 
@@ -207,11 +211,19 @@ input:-webkit-autofill {
     font-family: 'Lexend';
     color: #FEFEFE;
     border: none;
+    cursor: pointer;
 }
+
+.login-btn-container button:hover {
+    background-color: #0E2E5E;
+}
+
 
 
 /* left bottom image and date */
 .left-bottom {
+    display: flex;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #FEFEFE 0%, rgba(217, 217, 217, 0) 100%), url('img/bottom-img.jpg');
@@ -219,4 +231,44 @@ input:-webkit-autofill {
     background-size: cover;
     background-position: bottom;
     border-radius: inherit;
+    color: #FEFEFE;
+}
+
+.left-bottom p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+
+
+
+/* aside buttons */
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #194F90;
+    color: #fefefe;
+    padding: 0px 10px;
+    flex-grow: 1;
+    transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.3s, transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+.right div:hover {
+    background-color: #0E2E5E;
+}
+
+.right div:first-child {
+    border-radius: 0px 20px 0px 0px;
+}
+
+.right div:last-child {
+    border-radius: 0px 0px 20px 0px;
 }
