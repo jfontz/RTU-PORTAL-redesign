@@ -1,2 +1,2 @@
 # RTU-PORTAL-redesign
-My redesign for the RTU portal.
+My unofficial redesign of the Rizal Technological University (RTU) portal.
